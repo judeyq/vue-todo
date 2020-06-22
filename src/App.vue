@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>My Todo App!</h1>
+    <h1>TodoList</h1>
     <todo-list></todo-list>
     <router-view />
   </div>
