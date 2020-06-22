@@ -22,20 +22,7 @@ export default {
   data() {
     return {
       newTodoText: "",
-      todos: [
-        {
-          id: nextTodoId++,
-          text: "Learn Vue"
-        },
-        {
-          id: nextTodoId++,
-          text: "Learn about single-file components"
-        },
-        {
-          id: nextTodoId++,
-          text: "Fall in love"
-        }
-      ]
+      todos: []
     };
   },
   methods: {
@@ -50,6 +37,7 @@ export default {
       }
     },
     removeTodo(idToRemove) {
+      localStorage.removeItem("id");
       this.todos = this.todos.filter(todo => {
         return todo.id !== idToRemove;
       });
